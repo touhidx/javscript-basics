@@ -3,3 +3,4 @@ let car = {
   model: "BMW",
   price: 202021,
 };
+console.log(car);
