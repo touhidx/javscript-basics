@@ -28,32 +28,32 @@
 // }
 // countNumberProperties([-5, 0, 3, -4, 1]);
 
-function extractBodyContent(htmlString) {
-  let startTag = "<body>";
-  let endTag = "</body>";
-  let startIndex = htmlString.indexOf(startTag) + startTag.length;
-  let endIndex = htmlString.indexOf(endTag);
+// function extractBodyContent(htmlString) {
+//   let startTag = "<body>";
+//   let endTag = "</body>";
+//   let startIndex = htmlString.indexOf(startTag) + startTag.length;
+//   let endIndex = htmlString.indexOf(endTag);
 
-  if (startIndex === -1 || endIndex === -1) {
-    return "there is no <body> </body>  tag in this code !";
-  }
-  let innerBodyTag = "";
-  let foundTags = "";
-  for (const tag of htmlString) {
-    innerBodyTag += tag;
-    foundTags = innerBodyTag.slice(startIndex, endIndex);
-  }
-  return foundTags.trim();
-}
+//   if (startIndex === -1 || endIndex === -1) {
+//     return "there is no <body> </body>  tag in this code !";
+//   }
+//   let innerBodyTag = "";
+//   let foundTags = "";
+//   for (const tag of htmlString) {
+//     innerBodyTag += tag;
+//     foundTags = innerBodyTag.slice(startIndex, endIndex);
+//   }
+//   return foundTags.trim();
+// }
 
-let htmlString = `<html>
-  <head>
-    <title>My Page</title>
-  </head>
-  <body>
-    <h1>Welcome!</h1>
-    <p>This is my new React app.</p>
-  </body>
-</html>`;
+// let htmlString = `<html>
+//   <head>
+//     <title>My Page</title>
+//   </head>
+//   <body>
+//     <h1>Welcome!</h1>
+//     <p>This is my new React app.</p>
+//   </body>
+// </html>`;
 
-extractBodyContent(htmlString);
+// extractBodyContent(htmlString);
