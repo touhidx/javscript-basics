@@ -58,3 +58,54 @@
 // console.log(findFirstUniqueChar("aakkjbb"));
 
 // 04
+// function findLongestWord(sentence) {
+//   let clearWords = "";
+//   for (let i = 0; i < sentence.length; i++) {
+//     let char = sentence[i];
+//     if (
+//       (char >= "a" && char <= "z") ||
+//       (char >= "A" && char <= "Z") ||
+//       (char >= "0" && char <= "9") ||
+//       char == " "
+//     ) {
+//       clearWords += char;
+//     }
+//   }
+//   let words = clearWords.split(" ");
+//   let longestWord = "";
+//   for (let i = 0; i < words.length; i++) {
+//     let searchingWord = words[i];
+//     if (searchingWord.length > longestWord.length) {
+//       longestWord = searchingWord;
+//     }
+//   }
+//   console.log(longestWord);
+//   return longestWord;
+// }
+
+// let sentence = "Hello world, how are you today?";
+// findLongestWord(sentence);
+
+// 05
+
+function findSecondLargestUnique(numbers) {
+  let largest = null;
+  let secoundLargest = null;
+  for (let i = 0; i < numbers.length; i++) {
+    let eachNum = numbers[i];
+    if (eachNum === largest || eachNum === secoundLargest) {
+      continue;
+    }
+
+    if (largest === null || largest < eachNum) {
+      secoundLargest = largest;
+      largest = eachNum;
+    } else if (secoundLargest === null || secoundLargest < eachNum) {
+      secoundLargest = eachNum;
+    }
+  }
+  console.log(secoundLargest);
+  return secoundLargest;
+}
+let numbers = [10, 5, 20, 5, 15];
+findSecondLargestUnique(numbers);
